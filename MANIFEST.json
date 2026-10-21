@@ -1,0 +1,1286 @@
+{
+  "algorithm": "SHA256; symlinks hash literal link target; manifest excludes itself",
+  "entries": [
+    {
+      "path": ".gitignore",
+      "type": "file",
+      "sha256": "59ebdfa3205311b7b8ea1bb0e67a2c50150ad08c8e1d87f6e53b082f163f735f"
+    },
+    {
+      "path": "LICENSE",
+      "type": "file",
+      "sha256": "657529275dbb65767bcfa2effb378a96df99b5ef7f640b86ce0fa066630798cf"
+    },
+    {
+      "path": "PROVENANCE.json",
+      "type": "file",
+      "sha256": "f6a3ae0162b3346836c68b6dfb6b87d920b8508946487cf741890d6d358ccaac"
+    },
+    {
+      "path": "README.md",
+      "type": "file",
+      "sha256": "42b0a459f133a27f70eb5670ff469f3ee704a0364ba795241837329c18620941"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "type": "file",
+      "sha256": "d50cdf6f67316ba3d36b275e046bca27eaecbba84b7f81b8cda6f04dcce0e054"
+    },
+    {
+      "path": "bin/ego-browser",
+      "type": "file",
+      "sha256": "6dac256c720a38e01843d78c66cfbce6a615b4bd66fb58a4fd0af2f5998f55ca"
+    },
+    {
+      "path": "docs/ARCHITECTURE.md",
+      "type": "file",
+      "sha256": "ee4487f595212eeb2f41d159106b350c5efe2af91c50f9292a2416ba79dfcd5f"
+    },
+    {
+      "path": "docs/DEVELOPMENT.md",
+      "type": "file",
+      "sha256": "65c3ea50312121e8657540ec4fe882a2a25f32d9e8441be6640d266e511bb694"
+    },
+    {
+      "path": "docs/INSTALL.md",
+      "type": "file",
+      "sha256": "d82539c0e35842b4b6ad9252d4b1d70c6dcf463958e6d00aec2a746ba704cd21"
+    },
+    {
+      "path": "docs/KNOWN-ISSUES.md",
+      "type": "file",
+      "sha256": "c7cef3cdfb659997b4d6a58d7b0af7dfb970c28e20e86905c2358b601759ea9d"
+    },
+    {
+      "path": "docs/REPRODUCE-SOURCE.md",
+      "type": "file",
+      "sha256": "c42b96b02120601c74939906fc61efa615288403cdf143cdc33cf5e09a3a98a3"
+    },
+    {
+      "path": "examples/observe.mjs",
+      "type": "file",
+      "sha256": "dac5ebc2e841582b173e9d0c3f324db4b7d4d5c417dbf4beb44bca5918c2cd89"
+    },
+    {
+      "path": "package.json",
+      "type": "file",
+      "sha256": "b44bd1c7ef1472af06edec654dcce70e1aeae00e8a98f0232e4e5ef847be1c1f"
+    },
+    {
+      "path": "patches/daily-chrome.patch",
+      "type": "file",
+      "sha256": "2252049dc2a2d791ab010ddb633de5878894237cd012f572b1e2ba00b3109450"
+    },
+    {
+      "path": "scripts/check-manifest.mjs",
+      "type": "file",
+      "sha256": "661813e18874a623ad75891a06effdc1a2d6b23d2dc8f8228ed38a71be33c6e7"
+    },
+    {
+      "path": "test-prompts/README.md",
+      "type": "file",
+      "sha256": "44c9c37d611b4ca2c547fe41f9423884e34eafdd962698f926411260f1511791"
+    },
+    {
+      "path": "test-prompts/bilibili.md",
+      "type": "file",
+      "sha256": "471de0f0cc794b499d997206111317a5e926d6f2cf307ecf4da48724f7dcd4e9"
+    },
+    {
+      "path": "test-prompts/form30.md",
+      "type": "file",
+      "sha256": "0fac6dc2448b65951e60de45d46f3ada7a16738799fb734b178ed1952b803707"
+    },
+    {
+      "path": "test-prompts/kickstarter.md",
+      "type": "file",
+      "sha256": "144a3148d7f47f4dd6613ab0b3918acbdd181bcf68b5850fdb1a5183f4415ec8"
+    },
+    {
+      "path": "test-results/README.md",
+      "type": "file",
+      "sha256": "0bee8a337a1db19ec84f5445386f8460251ce0a0ccc16f5c9ec0c58a547a26df"
+    },
+    {
+      "path": "test-results/package-checks.json",
+      "type": "file",
+      "sha256": "d5d07002eb6f2b22870a929c833ad2537c2a016b25a39fcc3c6428804439b17f"
+    },
+    {
+      "path": "test-results/results.json",
+      "type": "file",
+      "sha256": "4be08965f2f5b0b665f6a8f1ee7d298ed2e5d68b1f2590bd43abc2b1dc5e420e"
+    },
+    {
+      "path": "test-results/screenshot-zoom.json",
+      "type": "file",
+      "sha256": "1eabe8a19ebcddbd6162e630542e543b70c31ea67d79cbb280ef20035fa9f914"
+    },
+    {
+      "path": "tests/fixtures/log-only.mjs",
+      "type": "file",
+      "sha256": "b684a7c0e84245e091d07bb114b7783e3082a6f10cb95995769cd19d017199a0"
+    },
+    {
+      "path": "tests/package.test.mjs",
+      "type": "file",
+      "sha256": "99a56c5e367111cf7500155ae6854fe8509295140039372574c4cd6b4572e987"
+    },
+    {
+      "path": "vendor/ego-lite/.agents/plugins/marketplace.json",
+      "type": "file",
+      "sha256": "139da02e63459ab00ab05b1363e88506fc52c26c885e93d0d8f783de750b8f4e"
+    },
+    {
+      "path": "vendor/ego-lite/.agents/skills/ego-browser",
+      "type": "symlink",
+      "target": "../../skills/ego-browser",
+      "sha256": "62669d20b58d2a034ced564880d06bddf355fd40b83a8973c27f2e8ba47855c6"
+    },
+    {
+      "path": "vendor/ego-lite/.claude-plugin/marketplace.json",
+      "type": "file",
+      "sha256": "4be501c714da77b932f0c4580619ec061d05bcf7a82f4e8343c0313e3a5e8d9e"
+    },
+    {
+      "path": "vendor/ego-lite/.claude/skills/ego-browser",
+      "type": "symlink",
+      "target": "../../skills/ego-browser",
+      "sha256": "62669d20b58d2a034ced564880d06bddf355fd40b83a8973c27f2e8ba47855c6"
+    },
+    {
+      "path": "vendor/ego-lite/.claude/skills/ego-lite-simplify",
+      "type": "symlink",
+      "target": "../../.github/dev-skills/ego-lite-simplify",
+      "sha256": "459f9d600da79c7d9eb033ecad3e0a98443f88c71f93fdf59e6db16c563bdc67"
+    },
+    {
+      "path": "vendor/ego-lite/.codex/skills/ego-browser",
+      "type": "symlink",
+      "target": "../../skills/ego-browser",
+      "sha256": "62669d20b58d2a034ced564880d06bddf355fd40b83a8973c27f2e8ba47855c6"
+    },
+    {
+      "path": "vendor/ego-lite/.codex/skills/ego-lite-simplify",
+      "type": "symlink",
+      "target": "../../.github/dev-skills/ego-lite-simplify",
+      "sha256": "459f9d600da79c7d9eb033ecad3e0a98443f88c71f93fdf59e6db16c563bdc67"
+    },
+    {
+      "path": "vendor/ego-lite/.github/dev-skills/ego-lite-simplify/SKILL.md",
+      "type": "file",
+      "sha256": "f7f0e0cfb18e3cd92e046c6d0b4beb7fd315372fdf86a2353559bb117957ba44"
+    },
+    {
+      "path": "vendor/ego-lite/.github/dev-skills/ego-lite-simplify/agents/openai.yaml",
+      "type": "file",
+      "sha256": "132e0336ec5611ba8f29f9529a3b7b5ed08e5c24240e132001ec03116178a516"
+    },
+    {
+      "path": "vendor/ego-lite/.github/release.yml",
+      "type": "file",
+      "sha256": "71a30a9387c0c41643cc91cd9ee308591d7c9bab2dff112eb08685ec5f7fbc9d"
+    },
+    {
+      "path": "vendor/ego-lite/.github/workflows/ci.yml",
+      "type": "file",
+      "sha256": "33971314fe80ced6fca42db3e8d8686cb51d3e2ba36ac2cc463e6d0a5ebbc556"
+    },
+    {
+      "path": "vendor/ego-lite/.github/workflows/main-pr-source.yml",
+      "type": "file",
+      "sha256": "f72df68421c62143240ce4583196db97cfe38112102b4c8a3cc6fa0a87fb33ee"
+    },
+    {
+      "path": "vendor/ego-lite/.github/workflows/purge-camo-cache.yml",
+      "type": "file",
+      "sha256": "ce292b52462eb367028932027daf13fdda5b2739fa1d71b40ba72d7062f3d508"
+    },
+    {
+      "path": "vendor/ego-lite/.gitignore",
+      "type": "file",
+      "sha256": "3ec05ceb7a21cbbf25889892501a2de79e1bff3b94c3a776012cc6d0731d9a5c"
+    },
+    {
+      "path": "vendor/ego-lite/AGENTS.md",
+      "type": "file",
+      "sha256": "8503b4d583740984dbe279a26db0c849295c2407cbaf3d129a74adec833c07bf"
+    },
+    {
+      "path": "vendor/ego-lite/CONTRIBUTING.md",
+      "type": "file",
+      "sha256": "6fc896b64bab9abb31c5f77c4e9f5042b42d812ea67ac8b4cd617a6a3b1c23db"
+    },
+    {
+      "path": "vendor/ego-lite/LICENSE",
+      "type": "file",
+      "sha256": "325b6f26ca9452fcfb81cc6f52e3889573a7c141e9d07ab35f678b7d95d48e52"
+    },
+    {
+      "path": "vendor/ego-lite/README.es.md",
+      "type": "file",
+      "sha256": "0f538b778e8aa8c1685b787dd3b82e1121a1994ba53fc8821d5d227c512aa6f7"
+    },
+    {
+      "path": "vendor/ego-lite/README.fr.md",
+      "type": "file",
+      "sha256": "0de9bac72372556dc93339f063090ff925926f989796e42fb51aea47f01ab13d"
+    },
+    {
+      "path": "vendor/ego-lite/README.it.md",
+      "type": "file",
+      "sha256": "42f33076186f0c1798b72c684fa76f06df5a36b4e5e02148d9f3859e6a0c0368"
+    },
+    {
+      "path": "vendor/ego-lite/README.ja.md",
+      "type": "file",
+      "sha256": "6a3c2d2f808cf44e01e08101cc2e1aa086cccfddbf5b51f2ae0c4c575fafcad2"
+    },
+    {
+      "path": "vendor/ego-lite/README.ko.md",
+      "type": "file",
+      "sha256": "8710cc82facb543df6c6a6ee65db2473af2e8b9587e39e8952dfdb4cea312a4a"
+    },
+    {
+      "path": "vendor/ego-lite/README.md",
+      "type": "file",
+      "sha256": "712ff420723efe868a5d6475f4f7360212e2cc7a5e05d2636d37342df5cad727"
+    },
+    {
+      "path": "vendor/ego-lite/README.pt.md",
+      "type": "file",
+      "sha256": "0c19042c8ae83d3af4c8162b03c8364bad1579fbdca03f0b666f5c8cbd72a29b"
+    },
+    {
+      "path": "vendor/ego-lite/README.ru.md",
+      "type": "file",
+      "sha256": "3ff8bd77f07f5e0dde6d1da57d8dfa75226a0bc12711bdfb2a742cea320a0025"
+    },
+    {
+      "path": "vendor/ego-lite/README.zh-CN.md",
+      "type": "file",
+      "sha256": "61e7d034d6cb79c62c69717f601688a442118c73af3a2648a27bf8f36e2b4533"
+    },
+    {
+      "path": "vendor/ego-lite/docs/assets/banner.png",
+      "type": "file",
+      "sha256": "a214f220972f9c37b1569f3fdb2e91bc54ed25214635a4353a84b854b80b43ef"
+    },
+    {
+      "path": "vendor/ego-lite/docs/assets/ego-lite-architecture.png",
+      "type": "file",
+      "sha256": "ef0a64f4c983ec8064ae919fdc6267437b05a92132e6511a8585e73baa0b004a"
+    },
+    {
+      "path": "vendor/ego-lite/docs/assets/ego-vs-agent-benchmark.png",
+      "type": "file",
+      "sha256": "16e3bfa646c7a0e4c43e04311711bb6b99d8f414710b74494b4ac843a28783fe"
+    },
+    {
+      "path": "vendor/ego-lite/docs/assets/real-world-bench.jpg",
+      "type": "file",
+      "sha256": "3cc41e5f9df0d72df19bd0b82021886b5ba991ab2bd74e9bb3e2a8978b3921c0"
+    },
+    {
+      "path": "vendor/ego-lite/docs/ego-browser-skill-command.md",
+      "type": "file",
+      "sha256": "55200648b44dbb5aa41d9c7ed8872edcbfb0fcb1800600086404e3964d60ab0d"
+    },
+    {
+      "path": "vendor/ego-lite/docs/local-runtime-development.md",
+      "type": "file",
+      "sha256": "57f565c376e31c6638e23c0373a75b55e7f275afa3d23de61250773dc00dab05"
+    },
+    {
+      "path": "vendor/ego-lite/docs/native-bindings-api.md",
+      "type": "file",
+      "sha256": "101f7ea43b4034b219d870a66cc2d132f1e24d006c42fb551996acdda1b0b202"
+    },
+    {
+      "path": "vendor/ego-lite/docs/native-javascript-dialog-requirement.md",
+      "type": "file",
+      "sha256": "d979ba1c7150152eef5b58de5029d474689496c6a613cb75501870bf9f377c6a"
+    },
+    {
+      "path": "vendor/ego-lite/docs/native-sdk-lifecycle-requirement.md",
+      "type": "file",
+      "sha256": "a09783a61dd1c46583ebfe0aebf4b256c013f47425744e5dd4561af2149d010e"
+    },
+    {
+      "path": "vendor/ego-lite/docs/native-snapshot-ref-requirement.md",
+      "type": "file",
+      "sha256": "b6db0fb0ea7f107813268fbf0e5984c15c54b9c8f606e7fa584f93031d0bb138"
+    },
+    {
+      "path": "vendor/ego-lite/install.md",
+      "type": "file",
+      "sha256": "98439f102d5601748e0c84dfcba0abdaa7b6f93600c75a7091ac18459441185c"
+    },
+    {
+      "path": "vendor/ego-lite/lefthook.yml",
+      "type": "file",
+      "sha256": "27cd31a7890d6d101cda6a25baf0e678aa6888f73cd4ce9426175b6a30363171"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/.gitignore",
+      "type": "file",
+      "sha256": "9ee302a2a60d985f633aba48d990776ae7ddac238bccdafa32c00fea539c2c35"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/README.md",
+      "type": "file",
+      "sha256": "8800b9e26228ca997e1339a4995ca827ef14073b05504141c1f7090955bd2108"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/package-lock.json",
+      "type": "file",
+      "sha256": "e111b6bd63b765afda39c7ed59531eec3bc653fa3448c8393364310e1a029b83"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/package.json",
+      "type": "file",
+      "sha256": "65d251dfe992cccf54049ec9b3d061984243c157b57d36bd1bf7eb4785db4906"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/scripts/build.mjs",
+      "type": "file",
+      "sha256": "7e58fa83dd625f457670ec054d7ef48deff3e811303b1bb2c08470057484234f"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/scripts/check-skill-translation.mjs",
+      "type": "file",
+      "sha256": "beeaee87790899e8f78a14d30e95a4b6a19afda0a0741c69714a803202f929d7"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/scripts/doctor-linux.mjs",
+      "type": "file",
+      "sha256": "3b608b2b9792150dc133d6c8e7b9e5888b3c6afe29179abe0ff0000b5e04b605"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/scripts/linux-smoke.mjs",
+      "type": "file",
+      "sha256": "9970b2a1e0e5bb6df976e609eac58de4b9faef727af2f8a7f9d79ebaf51e6602"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/scripts/real-browser-e2e/cases/environment.mjs",
+      "type": "file",
+      "sha256": "8bfe5d7f56827579f52aaee46e9a1c38385b3c7b52156846c25071882b8c8878"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/scripts/real-browser-e2e/cases/event-isolation.mjs",
+      "type": "file",
+      "sha256": "e15e182406ecf11946d13b15f816409b2419005d7163abcdbf2650cd821b0acf"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/scripts/real-browser-e2e/cases/helper-surface.mjs",
+      "type": "file",
+      "sha256": "ed07ef09e6ffb60bb14ff726f7fac8e772e8939daee49ba3b7a459f52d6ebe0e"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/scripts/real-browser-e2e/cases/index.mjs",
+      "type": "file",
+      "sha256": "965bb9790a6e880523117031d64e144c38a4d4fd0258ca816c7f0e0c4ceb4f69"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/scripts/real-browser-e2e/cases/keyboard-regression.mjs",
+      "type": "file",
+      "sha256": "d8057764a2a45b9a8794a584a44f4491da2e3309ad37967f51c069ea4ad26b3e"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/scripts/real-browser-e2e/cases/keyboard.mjs",
+      "type": "file",
+      "sha256": "08561f41f19fbd78ae1f52b66497fc1ac4b9e3dc88bcbe312228746c6a3022a2"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/scripts/real-browser-e2e/cases/navigation.mjs",
+      "type": "file",
+      "sha256": "fcc33424b0b70cdcc525cac7c24810d87d9ce2832a715e65db140e27bf6faa25"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/scripts/real-browser-e2e/cases/observation.mjs",
+      "type": "file",
+      "sha256": "94df5498c4e80efd5dfb5d3fb2e61a0401e75fbd13a827bee7c260c1e542191b"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/scripts/real-browser-e2e/cases/page-action-motion.mjs",
+      "type": "file",
+      "sha256": "6ad8a83fdf0e3bfd2e00a833f680fed4dd06c641a0fd4bebec6719b4493822ef"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/scripts/real-browser-e2e/cases/page-actionability.mjs",
+      "type": "file",
+      "sha256": "e51b3deb26ec2bf5ac0b4ba70369fb624261b92fb5ca21c349eb583f16b96054"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/scripts/real-browser-e2e/cases/page-api-alignment.mjs",
+      "type": "file",
+      "sha256": "662bd870b8289a5530875c0cca1b45750a6863f5c857a612ed6d79364087dff4"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/scripts/real-browser-e2e/cases/page-click-hit-target.mjs",
+      "type": "file",
+      "sha256": "ea024dda2e75d6cc8ef6992dab714442fa225615965638b7fd21eb28beda401e"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/scripts/real-browser-e2e/cases/page-delayed-popup.mjs",
+      "type": "file",
+      "sha256": "7af5010efcda982ab12610a77cf86f55161e9a49155fca61f9bbf0de3752d235"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/scripts/real-browser-e2e/cases/page-dialogs.mjs",
+      "type": "file",
+      "sha256": "f5c03701a4972f504962f8fa88b7406e274811ae31ac9d266fb83c9f5f6e926e"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/scripts/real-browser-e2e/cases/page-download.mjs",
+      "type": "file",
+      "sha256": "c8e9cda79d6d10df54f9f6e3e559e39aac6596bf312506673cf2604bd89ec7b7"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/scripts/real-browser-e2e/cases/page-drag-and-draw.mjs",
+      "type": "file",
+      "sha256": "744698dd5616da04e084e090ae8f386403b095704828b0751ad6c8bcfe2cacd2"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/scripts/real-browser-e2e/cases/page-evaluate-timeout.mjs",
+      "type": "file",
+      "sha256": "460f8c25811414b9d94899e13b4f6945ffbdd2af6685271859ce0d555341e29a"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/scripts/real-browser-e2e/cases/page-keyboard.mjs",
+      "type": "file",
+      "sha256": "acf58bdd70f2ce42f2293ae18abbf0e57de20fce618f2502c3e446567f53971f"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/scripts/real-browser-e2e/cases/page-labels.mjs",
+      "type": "file",
+      "sha256": "306622d005e23df73121cb7493d56dbb477ae9fb12947febe9d3eaa967df02e5"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/scripts/real-browser-e2e/cases/page-load-states.mjs",
+      "type": "file",
+      "sha256": "81505660da2de37926d623e752fe6c9a3f6ffb14ac56e8f133da768f39c224eb"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/scripts/real-browser-e2e/cases/page-media-playback.mjs",
+      "type": "file",
+      "sha256": "4878028e520cbd84d5da9aa2774ddf644eddabfacfd4c8a999e29d23e2646f9f"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/scripts/real-browser-e2e/cases/page-oopif.mjs",
+      "type": "file",
+      "sha256": "ff93b9edd6918c0ae87b6ef6e70e84f0c8f6ad556ac4b11d1b5b751444900df0"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/scripts/real-browser-e2e/cases/page-popup-waiter.mjs",
+      "type": "file",
+      "sha256": "109ae17dcf5a9782c2442ced03b7111a4e25ea69e741dd4b1ffa3bebe33c509a"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/scripts/real-browser-e2e/cases/page-ref-identity.mjs",
+      "type": "file",
+      "sha256": "be3280050cec47451057e64dc9d866e014ca7a4db2e6b8d6abcd3b319a720a1b"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/scripts/real-browser-e2e/cases/page-ref-workflows.mjs",
+      "type": "file",
+      "sha256": "52cbb42afd9dd7b71930db5ea3fa8ac470f5cf9feaaaf355245faf41de23f455"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/scripts/real-browser-e2e/cases/page-screenshot.mjs",
+      "type": "file",
+      "sha256": "c898a954e888c80815d7722c8e6b1b9f36f6e9feab7a989486e903989bb552a8"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/scripts/real-browser-e2e/cases/page-selector-compatibility.mjs",
+      "type": "file",
+      "sha256": "a26b78efd13f3df4f8eace08751b363ea8a36ee5609646c1cf74a1b2d8b7e76a"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/scripts/real-browser-e2e/cases/page-shadow-dom.mjs",
+      "type": "file",
+      "sha256": "d532ebbee6d64117a3ada345d853ad1354f81006e0714e0cff39ba3941262554"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/scripts/real-browser-e2e/cases/page-snapshot-locators.mjs",
+      "type": "file",
+      "sha256": "1274e45178aeaa722b3c2a74409be47f88c1605ade9e84740062a86e4a154987"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/scripts/real-browser-e2e/cases/page-snapshot-subtree.mjs",
+      "type": "file",
+      "sha256": "10ae93c6a9001033f878e7ca1945561544622f9917d4989c32c9247333192a08"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/scripts/real-browser-e2e/cases/page-text-locators.mjs",
+      "type": "file",
+      "sha256": "740d36f90c50fde126e798c03e554e4de9510296b16672779d4d32b4ef15bfe1"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/scripts/real-browser-e2e/cases/page-workers.mjs",
+      "type": "file",
+      "sha256": "7a352650e0a8af7e4662b2ca8c49729874cbe59813fe33e59e04e66248edc5e2"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/scripts/real-browser-e2e/cases/pointer.mjs",
+      "type": "file",
+      "sha256": "17211808d0104d527cab94184528d2b66ea1bca6e6324b45ff70fd332612a71a"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/scripts/real-browser-e2e/cases/profile-selection.mjs",
+      "type": "file",
+      "sha256": "8056b8f6a6602e753538dfaf3000fc6de7d9c1ad302d2499bd1eae938223009e"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/scripts/real-browser-e2e/cases/runtime-regression.mjs",
+      "type": "file",
+      "sha256": "81bc85b6f5f601fbeb64e01be8d488abfceedf2dc08293ebbaa2e12ad443e7a1"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/scripts/real-browser-e2e/cases/runtime.mjs",
+      "type": "file",
+      "sha256": "4880ba86a205dddde143063567cd283591c5d9c52e0e6f747370d272da56bc31"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/scripts/real-browser-e2e/cases/task-space.mjs",
+      "type": "file",
+      "sha256": "eddb32aed9d8bd1ebf1383fa7608116ea2c44d6b2228dd5632696d6ede499562"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/scripts/real-browser-e2e/cases/workflow-chains.mjs",
+      "type": "file",
+      "sha256": "66f3e54b5d4aaf6b756d84869d2a38404e90302e987465928fb933763d9562d8"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/scripts/real-browser-e2e/ego-browser-cli.mjs",
+      "type": "file",
+      "sha256": "e4b7eb3ea585f8c9133764dd0e4489aeb95f9b58d84d0115edefd5b26b095af1"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/scripts/real-browser-e2e/ego-source.mjs",
+      "type": "file",
+      "sha256": "d01e2e3f4b7fd5bcc278c09757447afe729a977dd07127f4439db50d02206d1a"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/scripts/real-browser-e2e/fixture.mjs",
+      "type": "file",
+      "sha256": "2ae49ba77bacbfc3db369fbab14fa0d4e132238ffcbac6bd90124d0ceaa52706"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/scripts/real-browser-e2e/fixtures/openai-gpt-4-system-card.pdf",
+      "type": "file",
+      "sha256": "ca3677e1b83e255aa1296d432d374378154f230f3c296b32ee67540d571b7004"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/scripts/real-browser-e2e/run-command.mjs",
+      "type": "file",
+      "sha256": "fccda3911b145033fbca9a82b99fc1fc2f4ac7a3b6e46b518498f7aa2b249431"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/scripts/real-browser-e2e/runner.mjs",
+      "type": "file",
+      "sha256": "2cab566e1c07a94e1d3c96a1c8d11f123c8458d00b15a5de411fa6312cf7c25a"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/scripts/repro-popup-foreground.sh",
+      "type": "file",
+      "sha256": "7276565583aaecc6ffa35a893cd820c26d6c9bbd86d2e112e214d0af534dd28c"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/scripts/run-real-browser-e2e.mjs",
+      "type": "file",
+      "sha256": "609bb8a8cd554b445a06048f0e299b48c74c5df479e5e007b1bdc2bc9942c767"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/scripts/validate-site-skills.ts",
+      "type": "file",
+      "sha256": "54b9d6edff4706fadeb7dd7ac57398dd67d0e0237fa0755464e4a2b2b3ac93c0"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/skill-body/SKILL.md",
+      "type": "file",
+      "sha256": "4513d101e59f98a411bd8b4d6d1580121028854a075f47d9df210e888a14d3a5"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/src/browser-runtime.test.mjs",
+      "type": "file",
+      "sha256": "e6a1636ed0913e3bab9b4a6897f340aaf66c5622159de3527d8a089f7191d049"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/src/browser-runtime.ts",
+      "type": "file",
+      "sha256": "7945f1f4639c865f1ab11a38d2cd9ec8ca31706ef6f2db24cacc4d5304129e44"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/src/cdp-eval.test.mjs",
+      "type": "file",
+      "sha256": "b486cb05786f2fd966a7bbfbe3e644920d7d98ac456c9f0ae0e1ede7922e3695"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/src/cdp-eval.ts",
+      "type": "file",
+      "sha256": "f5a05864d404c665568b1dcab5aa81383671dff560d311b7d21aee7c34de9474"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/src/clipboard.test.mjs",
+      "type": "file",
+      "sha256": "4198f5f6d6dd02ba181e512ecd250dc5b973a9ee1f98a2c390f820b85ac10838"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/src/clipboard.ts",
+      "type": "file",
+      "sha256": "a9c36a650f7c70d16c8a8e67f87bc10ad6167f9202ad80ff74e5d77b3f2ac4b5"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/src/driver/action-target.test.mjs",
+      "type": "file",
+      "sha256": "85e51623ff7109a9d36e915e88d2f913011677358089bfafd900088c0427f3a3"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/src/driver/action-target.ts",
+      "type": "file",
+      "sha256": "def99cf56810725e96b2320cc50cf50f85819cba093dc62651cae402171b2c67"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/src/driver/downloads.test.mjs",
+      "type": "file",
+      "sha256": "424f04234bb2a8514ff4598849d7b13316fe620a9f7d42cf2723e8f571f2cd88"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/src/driver/downloads.ts",
+      "type": "file",
+      "sha256": "d4d76c3060bbdefab332652eb233efec466ce5fc85b22c93f57876c686ecfd7e"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/src/driver/element-ops.ts",
+      "type": "file",
+      "sha256": "93deb021820f8ed28118e2e0a363e02c95d8d643b758df86e743b5764574bd96"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/src/driver/files.ts",
+      "type": "file",
+      "sha256": "23df8ea1c2d65915fc9d32bc291732415632edd38e8c3c323ad2e738992c97c4"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/src/driver/keyboard.test.mjs",
+      "type": "file",
+      "sha256": "a374980b1221a7a4d4646b1d55ba535e4c617e553ef1ca7838bfaa4b496302a3"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/src/driver/keyboard.ts",
+      "type": "file",
+      "sha256": "57975553afac9dbbf172ff834b4bf05d8e839ddca36688339dcf73c4d4119a42"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/src/driver/load.ts",
+      "type": "file",
+      "sha256": "eb0e291a712d52a1d2dc8dfffb722c8aa6363a79ba0ae6cf06c38fe2a36993e5"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/src/driver/nav.test.mjs",
+      "type": "file",
+      "sha256": "e0bb762cc49e13474c4420b534360cfbfc2bb40b267e4062c23e1c17f287cc89"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/src/driver/nav.ts",
+      "type": "file",
+      "sha256": "ed0631c9a53c12d09d0e1be25640ffc709441e6083d5600c48c413e790f8656e"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/src/driver/observe.test.mjs",
+      "type": "file",
+      "sha256": "c21563afe565ca6661e8be2178fee7d62d8668321ef413bd05695aac368c515d"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/src/driver/observe.ts",
+      "type": "file",
+      "sha256": "2596ffbd7a29de840bb661b071d37a091c04d43d33ebf30bc8fc2024a4e710e3"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/src/driver/page-actions.ts",
+      "type": "file",
+      "sha256": "277de1897e0b12fe6d6c83eaf15da82cacf611837fe66fb794a4acef361be607"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/src/driver/page-input.ts",
+      "type": "file",
+      "sha256": "f84ae177596f61a1341b9cf07833a778d4c078d59679e2dfe5c840ecbea15c90"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/src/driver/page-keyboard.ts",
+      "type": "file",
+      "sha256": "57faea676100f9f9229d20b2bd3e95ef3c80b6421143adf2293832dd398f0032"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/src/driver/page-waits.test.mjs",
+      "type": "file",
+      "sha256": "7890a44d94bb52b89984ee1cc35bf531e50e18f5bf4e80e58df3d59ba880fd6e"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/src/driver/page-waits.ts",
+      "type": "file",
+      "sha256": "9573acd3dd19094ba027cccff10f0d4d867741a65d5ab5064ebb39925eb97b4c"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/src/driver/pointer.test.mjs",
+      "type": "file",
+      "sha256": "4a00a10e675869eedcd684ee3c36913b6c442839d18a7c6315ae8640e817c11d"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/src/driver/pointer.ts",
+      "type": "file",
+      "sha256": "ad55ec63c7c986bc18e3c2ade24dfc2d7861bfa9f22558445fbc121a7c283c3c"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/src/driver/scroll-motion.test.mjs",
+      "type": "file",
+      "sha256": "65a91dd1a5d544ffc3a3a2a17ac970f2429b0c4a8bc3daf3e0bf4a1657d8efa9"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/src/driver/scroll-motion.ts",
+      "type": "file",
+      "sha256": "41ee624accde10caea39de36517e9b746269043945d2774de3b484d91e08fcfc"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/src/driver/waits.test.mjs",
+      "type": "file",
+      "sha256": "62198ecbaccef5c835bfd144c778ab246ac67b48f5bf215bbfbe224cef4b0983"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/src/driver/waits.ts",
+      "type": "file",
+      "sha256": "0ebfe0717640d21b4b9e59f54447da0cb94ed34b0fcb1df4892cc2f74f38b4b6"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/src/ego-errors.test.mjs",
+      "type": "file",
+      "sha256": "f29a74d510ef7ba7c34c143bee3c9998cc5e33beca16411341cddbf672bc0aae"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/src/ego-errors.ts",
+      "type": "file",
+      "sha256": "2a550ffca14d13cd3fc73a9cf1a33b0fe7dd6581558a3d69bf9e18a77bc7a5df"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/src/element-resolver.test.mjs",
+      "type": "file",
+      "sha256": "4630fe7bbf999603f223854af1de9ee51711db85ff1382db92db023c1894af35"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/src/element-resolver.ts",
+      "type": "file",
+      "sha256": "6519560e2f15cfe74835885eacc516f82003fe4636af62532d02e1c96e2d5bcb"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/src/env.ts",
+      "type": "file",
+      "sha256": "9e5f62eb3864311a0afdf96024b16646de1885ffc8ec4e8f57282bd8cc50d167"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/src/format.test.mjs",
+      "type": "file",
+      "sha256": "baceaaeb5281089ef156eaf66ebec2af7c41759d4914d9b755474e4d849f3f8d"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/src/format.ts",
+      "type": "file",
+      "sha256": "cec149fa06e8a4c5d50bf6158aa02dda55335acb0ef3ed7f4716cbd0dd54a564"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/src/help-runtime.test.mjs",
+      "type": "file",
+      "sha256": "c020c6b53d71e45fbfd011796f1e9398d0c26b0f0e0719e9cc3d949ffb383060"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/src/help-runtime.ts",
+      "type": "file",
+      "sha256": "1f6d7b466623ad12497a79f73f81e420a87c8d82b53e28f49347705f87cdb9e3"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/src/helpers.test.mjs",
+      "type": "file",
+      "sha256": "470c2914f5918402fa0b1c6686b68e50d10fff611a0a2ea4923bd3ca1bb63300"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/src/helpers.ts",
+      "type": "file",
+      "sha256": "45de52ef7032e7679b0fed203187e11a056cabb3f94f9fe9ba419326e26f8eab"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/src/http.ts",
+      "type": "file",
+      "sha256": "3cbb380a0fb74efe1c6a19f09020fd6e94a352f817c8d2bd1afc95a9f36e0bc0"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/src/index.ts",
+      "type": "file",
+      "sha256": "7abdbacb88f0eb137c02c43b480661a5ea276e6dc1ccb7a9ef9c8b3f9a1dd8f1"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/src/learning/check-domain-learning.ts",
+      "type": "file",
+      "sha256": "8330c6558ae536ad17b4fd4d7f1a476d9e1ca387872de92964589febb34eff94"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/src/learning/index.ts",
+      "type": "file",
+      "sha256": "bb67ccf55acac6c345bf0483f1f3112211b808f597fa9c64ce9f7327dedc100c"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/src/learning/validate-learning-format.ts",
+      "type": "file",
+      "sha256": "06f298bbd14a999cc4befa39dd92bd4f105b101967b7c2945f983d577dc46f0d"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/src/linux/bridge.test.mjs",
+      "type": "file",
+      "sha256": "08888a52e4d9f8847fc68ea48b9b6225a8228b35d4aa49a70b95e85653bac9db"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/src/linux/bridge.ts",
+      "type": "file",
+      "sha256": "19a27b4a663643187d116ed929dcde324a2f19c7d9bc5193bc5dda98d5ca4b91"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/src/linux/client.ts",
+      "type": "file",
+      "sha256": "6a6ac7a71e3718beb1d81d834efc005e89aa666f5ebba36bd52019268a0ce55d"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/src/linux/daily-chrome.ts",
+      "type": "file",
+      "sha256": "faf68286fc53444420945b2f0484a959d1a4b165cabbfce12939d6ab3f478e8b"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/src/linux/host.test.mjs",
+      "type": "file",
+      "sha256": "93e8314491fc34b9d9eeb32377095d7adbccba8b1ef1747f7198a0b90351f084"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/src/linux/host.ts",
+      "type": "file",
+      "sha256": "36db3639a463bf2f641d7318b3bde53c2a9d91d4fa30e7940a89600425cceadb"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/src/linux/index.ts",
+      "type": "file",
+      "sha256": "62046b19f8be137226df51da9208bbe58f2f21a2d473f20c848fdb3b77eecb67"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/src/linux/launcher.ts",
+      "type": "file",
+      "sha256": "1d38a4fbfd59a29e7a047a298d120c0f1edc683cd43732c9c74045eaab24f4fd"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/src/linux/snapshot-ax.test.mjs",
+      "type": "file",
+      "sha256": "b808290c99079904d1f89c07106e2abf909c2732753ffa5cb9ae4049e82734f4"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/src/linux/snapshot-ax.ts",
+      "type": "file",
+      "sha256": "ca6701e7885c8e444ac73b53769bd6c6d1c3454357a923a4ec2f9751b4becc2f"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/src/linux/task-spaces.test.mjs",
+      "type": "file",
+      "sha256": "2cae9dae7642b8a786cb05bdab1c233b8279f8fe7a57fde43596887d08b263c8"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/src/linux/task-spaces.ts",
+      "type": "file",
+      "sha256": "5aa58e2f63e22f30aa2c31643da6ca2600ad0258121547204ab562122898932f"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/src/linux/transport.test.mjs",
+      "type": "file",
+      "sha256": "dc416544149a74693fd793596333032bb44d83283e816ce8fe334ccdc2648ced"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/src/native-gate.test.mjs",
+      "type": "file",
+      "sha256": "4d7e8b2d44e20a018a212c1a5d3603cb276f7e5505203a6850a2eb43b17df949"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/src/native-gate.ts",
+      "type": "file",
+      "sha256": "21d36d22913d330ce5187180df536510f000f31d209d1d1eebc41a85bf89ff73"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/src/output-sink.test.mjs",
+      "type": "file",
+      "sha256": "912d7a14d4d54d2fae71bd260ec4b88df17c65c3e502c03de62b1347f77866f0"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/src/output-sink.ts",
+      "type": "file",
+      "sha256": "68562f301b0f7cf772e7bb5e50de8f2ff1cdc0faccb9df83f472d3614885f2ff"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/src/page-actions.test.mjs",
+      "type": "file",
+      "sha256": "e7584d7af95c1aedd44cae05c4f5a38d610f37e6b5a005ca4ee9ef160fe2ba7e"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/src/page-context-guard.ts",
+      "type": "file",
+      "sha256": "0dff9749f4ada6072c8be6720fc74a9cfd0f916c122b34d3938c8cd072f25505"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/src/page-discovery.test.mjs",
+      "type": "file",
+      "sha256": "b9909608eb7b8021bfd406bd8f27ae6e9cad7668d4d54ec6dea1905ad5034ef3"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/src/page-discovery.ts",
+      "type": "file",
+      "sha256": "4c984bf043e783de0fe40c4a17111acb7405ceeb9d39a4fe597800bc3629d677"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/src/page-ledger.test.mjs",
+      "type": "file",
+      "sha256": "1ef47b4e9f073247aee7de83c3e36286761400fee36faff651a9bbadb7dd27d9"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/src/page-ledger.ts",
+      "type": "file",
+      "sha256": "d0cd02e19ff415c5fd350a11013cb72e935267bd48319d58d8332075bbc8b0fa"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/src/page-model.test.mjs",
+      "type": "file",
+      "sha256": "b4f338e0f9c9d085b276435f01f49365411cd519bbf3ae2f63d47111fe8f596b"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/src/page-model.ts",
+      "type": "file",
+      "sha256": "04ad0c422e9e20b3f2855f4c2ca60f157e65780cb1804a83628f2e6a45709b1c"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/src/page-ref-registry.test.mjs",
+      "type": "file",
+      "sha256": "5bab5e46f56a75742835661456d0b4d390cd36335f445f5e834cc8635d688072"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/src/page-ref-registry.ts",
+      "type": "file",
+      "sha256": "a43a1b5be8de8758b03741889dec9604f153285d22b60b696cafee6da7872f56"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/src/public-api-schema.test.mjs",
+      "type": "file",
+      "sha256": "dfb2b7898859ea5fcb760a44ef4800a2acafdaf23b5b9e4b1fd6a058c8639fd6"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/src/public-api-schema.ts",
+      "type": "file",
+      "sha256": "67516fbf335abf6100a40192513153a523343b3316424c7e7bf2088d69b8a4da"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/src/real-browser-fixture.test.mjs",
+      "type": "file",
+      "sha256": "f9664614451edb28f35af9dcb3d95fab062ff5d088927b5eda642d0e859df8d7"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/src/real-browser-runner.test.mjs",
+      "type": "file",
+      "sha256": "96ad694ed7d395958a45f9fbffc02d710d8b61eab54e44b9859a727157f73841"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/src/ref-map.test.mjs",
+      "type": "file",
+      "sha256": "46945ff84ee23c05b122a9b88fa26e338a517603be1a00790a68f40e9cdb9ff6"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/src/ref-map.ts",
+      "type": "file",
+      "sha256": "0c55e63707ae970408b6cbae3c2d0e1dc14431f70414499e060ef58a59df534c"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/src/ref-state.ts",
+      "type": "file",
+      "sha256": "19593d632fb940f87c5183601a149b13bb5201c4a1a6977baf9d3d359b3c2bb6"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/src/run-output-sink.test.mjs",
+      "type": "file",
+      "sha256": "6d8dbbc7e10a081a822718975af8c33488170577a3e6d9137e7f0c03898b089e"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/src/run.ts",
+      "type": "file",
+      "sha256": "42d444cc2ad9dc53269bbc5d1ef6de5d8a1271f67ec85d993504923aeb21e043"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/src/sdk-lifecycle.test.mjs",
+      "type": "file",
+      "sha256": "4a773f951b56a9c0f5de3d315279c822a6bfc72f8b04f5c72287d27b258056ae"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/src/skill-migration.test.mjs",
+      "type": "file",
+      "sha256": "3b3ca4064554f8153d6d670dc786f22a18d1b6d847d2bf2d003ce8316eb9cd75"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/src/skill-migration.ts",
+      "type": "file",
+      "sha256": "7a0ed94c502449d1cd3f844bd6b8bd444b5c7bae69255ce02ee6c7554e253ac1"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/src/skill-package.test.mjs",
+      "type": "file",
+      "sha256": "08bcd93667194283ad2eb985e3742aecfe8d93498409d9f71d6d9232320c9708"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/src/snapshot-result.test.mjs",
+      "type": "file",
+      "sha256": "5cd8f390649d0985bcec7c2cc4edde8354434eb2d02ec8b601d77dbce4cd05cf"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/src/snapshot-result.ts",
+      "type": "file",
+      "sha256": "3b74282fb9cc7e0bc333d9c27a095c94680b1238bfadf505bf8835e9ab44420d"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/src/state.ts",
+      "type": "file",
+      "sha256": "c8d7dfe36ab1aafa66c3a7012ee5442683d754057fc507ee29ef17dc02244a6a"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/src/taskspace-e2e.test.mjs",
+      "type": "file",
+      "sha256": "403cb80bf6d8d53c4344ed850c7a67c0d10c3a208350849b0228655b5a35a052"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/src/update-notice.test.mjs",
+      "type": "file",
+      "sha256": "582762e21af095aaac765d4876d448d19cea22ee9273cb9d788ff6673c5808b2"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/src/update-notice.ts",
+      "type": "file",
+      "sha256": "042e74fc23bde0cd73a7b4ae3b4986fb5046f5fdcd57c15db924935da594bfe1"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/src/workflows.test.mjs",
+      "type": "file",
+      "sha256": "b87a455af48ea912f4b6022a247f78586ada896767e455103ab25ec7ee930843"
+    },
+    {
+      "path": "vendor/ego-lite/package/ego-browser/tsconfig.json",
+      "type": "file",
+      "sha256": "05229e6d024957cd5b87fab34ee332c6c985873f694188fe6b13c7ce2134c0bf"
+    },
+    {
+      "path": "vendor/ego-lite/plugins/ego/.claude-plugin/plugin.json",
+      "type": "file",
+      "sha256": "4a6148035e30df50f4fa9f7bdf4f0dbe1d9cfc6d807763195547ceecc4a59a5d"
+    },
+    {
+      "path": "vendor/ego-lite/plugins/ego/.codebuddy-plugin/plugin.json",
+      "type": "file",
+      "sha256": "daa6f0a31b37d6ba53cdeb864dd0a803df57fd4791c63602b9133d035a7ffa44"
+    },
+    {
+      "path": "vendor/ego-lite/plugins/ego/.codex-plugin/plugin.json",
+      "type": "file",
+      "sha256": "4664a2b30cb30b22f0d10fce0017e1d604380ca23ba4264e2545ccf5d4837f09"
+    },
+    {
+      "path": "vendor/ego-lite/plugins/ego/.cursor-plugin/plugin.json",
+      "type": "file",
+      "sha256": "48c489866951f1d5c17e4d53f8af519d76ad2d43abec2d7fcffaddbe97a69721"
+    },
+    {
+      "path": "vendor/ego-lite/plugins/ego/.qoder-plugin/plugin.json",
+      "type": "file",
+      "sha256": "daa6f0a31b37d6ba53cdeb864dd0a803df57fd4791c63602b9133d035a7ffa44"
+    },
+    {
+      "path": "vendor/ego-lite/plugins/ego/.workbuddy-plugin/plugin.json",
+      "type": "file",
+      "sha256": "daa6f0a31b37d6ba53cdeb864dd0a803df57fd4791c63602b9133d035a7ffa44"
+    },
+    {
+      "path": "vendor/ego-lite/plugins/ego/LICENSE",
+      "type": "file",
+      "sha256": "325b6f26ca9452fcfb81cc6f52e3889573a7c141e9d07ab35f678b7d95d48e52"
+    },
+    {
+      "path": "vendor/ego-lite/plugins/ego/README.md",
+      "type": "file",
+      "sha256": "d117dcd3f332e277e47bc0d3e4d99489915e38b65bdc3a68c9e60b680223f76c"
+    },
+    {
+      "path": "vendor/ego-lite/plugins/ego/cordis.patch.yml",
+      "type": "file",
+      "sha256": "9e2b25202ea29345f5dc3d09ded41d6ec379f7c0a201691807e38915a540bd5f"
+    },
+    {
+      "path": "vendor/ego-lite/plugins/ego/dsh/src/index.js",
+      "type": "file",
+      "sha256": "a993d9a5b2e8142bf68f5433ee156b55d3684f40375f18050607deba04b74fba"
+    },
+    {
+      "path": "vendor/ego-lite/plugins/ego/index.js",
+      "type": "file",
+      "sha256": "ddf74efae66a2f5f08247a6a24fb35764737d33be2d6ad3388b0e4ef84d8cc3e"
+    },
+    {
+      "path": "vendor/ego-lite/plugins/ego/package.json",
+      "type": "file",
+      "sha256": "b67211c8e9548af276bb86fb06101df8d53d639f9323ab5450b0fe944e70c0fd"
+    },
+    {
+      "path": "vendor/ego-lite/plugins/ego/plugin.json",
+      "type": "file",
+      "sha256": "022cbee7c81487e10052d29860d2f02ff9928e3031c8f07efa8d5983bc4f0401"
+    },
+    {
+      "path": "vendor/ego-lite/plugins/ego/skills/ego-browser",
+      "type": "symlink",
+      "target": "../../../skills/ego-browser",
+      "sha256": "bfe7212e4c847abf7f137aa77a429b06958bf94d0feffe24cdcfdfb299094e9f"
+    },
+    {
+      "path": "vendor/ego-lite/plugins/ego/tests/claude-plugin-mode-isolation.test.mjs",
+      "type": "file",
+      "sha256": "c196d6f48dfb4f43ed323a5a45aed026800a20e4c0803bb3de18a6f52d4ed2f1"
+    },
+    {
+      "path": "vendor/ego-lite/plugins/ego/tests/cross-host-plugin.test.mjs",
+      "type": "file",
+      "sha256": "2671fbe935046e4fbc3338eb89e222a22bcaffd23d3933141cfd7a77746ddef3"
+    },
+    {
+      "path": "vendor/ego-lite/plugins/ego/tests/dsh-plugin.test.mjs",
+      "type": "file",
+      "sha256": "5916370ff2a3f53512b231fc7411b168bcf7d8136ea868c2061d6d69c0122a2e"
+    },
+    {
+      "path": "vendor/ego-lite/plugins/ego/tests/plugin-packaging.test.mjs",
+      "type": "file",
+      "sha256": "14d710333c847ddaa93883d72556c6b6c9ef1a463bc8108e31fcffd6c1bc2dca"
+    },
+    {
+      "path": "vendor/ego-lite/plugins/scripts/package-plugins.mjs",
+      "type": "file",
+      "sha256": "b9d6e0312c62805d1d2361071ef2a8bea7d99ee248a69c6cc3c327d4251e4b71"
+    },
+    {
+      "path": "vendor/ego-lite/skills/ego-browser/SKILL.md",
+      "type": "file",
+      "sha256": "ae3ebd9a80c882793e7e6a52821a1ca093fdfa792460d5f62cd8d35c5f39df89"
+    },
+    {
+      "path": "vendor/ego-lite/skills/ego-browser/agents/openai.yaml",
+      "type": "file",
+      "sha256": "81a941e83feb556827d72aa98d7bc97a909294e386ff9f6a1817de92e8767b89"
+    },
+    {
+      "path": "vendor/ego-lite/skills/ego-browser/assets/composer-icon.png",
+      "type": "file",
+      "sha256": "2822b28752520f2a5506cb0693c8db2fd1ec0345806454b5f92d999b84b5bc1f"
+    },
+    {
+      "path": "vendor/ego-lite/skills/ego-browser/assets/logo.png",
+      "type": "file",
+      "sha256": "cec732e29ea3b03d8920b28d912306f43651186dc2f4a488800da9db0a50f993"
+    },
+    {
+      "path": "vendor/ego-lite/skills/ego-browser/learnings/github/browser-tools/repo-stats.js",
+      "type": "file",
+      "sha256": "99f5de2388ebbd24646f43e438587a161988c54f5dab23a7ab23de6c8c8f6bd5"
+    },
+    {
+      "path": "vendor/ego-lite/skills/ego-browser/learnings/github/manifest.json",
+      "type": "file",
+      "sha256": "a5d459ccb7849a4fa9a8086a0a7452886465f7e46cf4afcce12a998d6e140e3c"
+    },
+    {
+      "path": "vendor/ego-lite/skills/ego-browser/learnings/github/notes/overview.md",
+      "type": "file",
+      "sha256": "2f5ff75d91526b232d725a8f1c89be7f846fdb334324fa92054fcf868cbba22e"
+    },
+    {
+      "path": "vendor/ego-lite/skills/ego-browser/learnings/github/tools/open-issues.js",
+      "type": "file",
+      "sha256": "54405d5b5a213372aa2541cd8f6dc141b30ab97fc13072135e466f5f14e996a4"
+    },
+    {
+      "path": "vendor/ego-lite/skills/ego-browser/learnings/github/tools/search-repos.js",
+      "type": "file",
+      "sha256": "6fcbffbebba96d690187d9123d5226846da60e82991e9f0ec0bbf1568cd9c4be"
+    },
+    {
+      "path": "vendor/ego-lite/skills/ego-browser/learnings/google/browser-tools/autocomplete.js",
+      "type": "file",
+      "sha256": "95ad95f370533bf56a554e7d79ac39f16f860d1ca4d8c6eb01876fd120beb146"
+    },
+    {
+      "path": "vendor/ego-lite/skills/ego-browser/learnings/google/manifest.json",
+      "type": "file",
+      "sha256": "639e61238ccdb0ee06855fb8ce2585f6f3e9fcfff86ccafc54c20a48c6e00f74"
+    },
+    {
+      "path": "vendor/ego-lite/skills/ego-browser/learnings/google/notes/overview.md",
+      "type": "file",
+      "sha256": "78771e9a1f6960efa5e91261dfe44ec5dde7f485a1b181334912a2e45f751865"
+    },
+    {
+      "path": "vendor/ego-lite/skills/ego-browser/learnings/google/tools/search-extract.js",
+      "type": "file",
+      "sha256": "96350a2d6657f8efc79b639b397ba74d9b5af218f12b6261df1f92e0cb493d34"
+    },
+    {
+      "path": "vendor/ego-lite/skills/ego-browser/learnings/x-com/browser-tools/extract-post.js",
+      "type": "file",
+      "sha256": "338db35bdf4d83258f5b646e67d38fb7f63bdbd243bac2e94236bb348b6ff64f"
+    },
+    {
+      "path": "vendor/ego-lite/skills/ego-browser/learnings/x-com/manifest.json",
+      "type": "file",
+      "sha256": "4eb12fecbaa37cc41e8b556e3eea1dc006d6ee587368fb318eca6dd3910fd896"
+    },
+    {
+      "path": "vendor/ego-lite/skills/ego-browser/learnings/x-com/notes/overview.md",
+      "type": "file",
+      "sha256": "23ef996495cf14b24809e29d5bcdfb3d049bb97fa26b5eebda3e035f1ed6ed1d"
+    },
+    {
+      "path": "vendor/ego-lite/skills/ego-browser/learnings/x-com/notes/timeline.md",
+      "type": "file",
+      "sha256": "1a1cde5c3f432329b8dee566a65415c2ed5fd93ed556b541bc20e05234889278"
+    },
+    {
+      "path": "vendor/ego-lite/skills/ego-browser/learnings/x-com/tools/search-users.js",
+      "type": "file",
+      "sha256": "b780616e32761f80e9524375c144b053e920109d49e550281950d0a7fcbd0f74"
+    },
+    {
+      "path": "vendor/ego-lite/skills/ego-browser/learnings/x-com/tools/timeline.js",
+      "type": "file",
+      "sha256": "6ac5b706a3cc32ea73ffb80d766c0cd78b63489d4f985563fa78d534a28825f7"
+    },
+    {
+      "path": "vendor/ego-lite/skills/ego-browser/references/clearing-state.md",
+      "type": "file",
+      "sha256": "c9a022df55f396607ec8b7dc486ab452f1a133fd04fd954a2ff3f86c4df9458c"
+    },
+    {
+      "path": "vendor/ego-lite/skills/ego-browser/references/install.md",
+      "type": "file",
+      "sha256": "19acc7b698685b9328ba5ce41cff8d4919e11ab0dd655b14fe9f3683eb2565f9"
+    },
+    {
+      "path": "vendor/ego-lite/skills/ego-browser/scripts/install.sh",
+      "type": "file",
+      "sha256": "80633963c1cc8c00995a61bb9ae91041eb3bf2c2139c2011fecf88371d283db0"
+    },
+    {
+      "path": "vendor/ego-lite/spec/agent-skills-spec.md",
+      "type": "file",
+      "sha256": "ff22f2be775f4b757c9a7a2df0421de4c94021d34d9382cea5dd567ff0cdad2c"
+    }
+  ]
+}

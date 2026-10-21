@@ -1,0 +1,20 @@
+{
+  "date": "2026-10-21",
+  "scope": "New standalone Ego distribution, offline packaging checks only",
+  "platform": "macOS arm64",
+  "node": "26.4.0",
+  "freshDependencyInstall": "npm ci --ignore-scripts in the exported vendor package, no original node_modules symlink",
+  "sdkTests": {"total": 554, "passed": 554, "failed": 0},
+  "distributionTests": {"total": 7, "passed": 7, "failed": 0},
+  "typecheck": true,
+  "guideVersion": "2.1.0",
+  "sdkIndexSha256": "273087635236fcd0690f9df58238f7387ab7d8ec0d0baa42bca9e0c75d94d694",
+  "hostSha256": "9c1639be8c45beef229b40b349235066b903a9a52381c07e6018edc43462ff0f",
+  "coreBuildMatchesHistoricalBusinessTrials": true,
+  "newDistributionWrapperLiveBusinessRetest": false,
+  "newWrapperChecks": ["help", "daily-mode guide and end marker", "inline console-only script", "file console-only script", "no isolated browser fallback", "vendored source is not a local installation symlink", "Pi program/config absence"],
+  "rootPrivateModelConfigsIncluded": false,
+  "rawAuthenticatedSessionsOrScreenshotsIncluded": false,
+  "knownScreenshotZoomDefectFixed": false,
+  "note": "Core hashes match the historical tested SDK; new local wrapper verification does not claim new live browser acceptance. No browser re-enabled for packaging."
+}

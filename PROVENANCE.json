@@ -1,0 +1,29 @@
+{
+  "project": "ego-chrome-bridge",
+  "distributionVersion": "0.1.0-experimental",
+  "date": "2026-10-21",
+  "scope": "Ego SDK plus Chrome host; Agent-independent, no Pi program/configs",
+  "upstream": {
+    "repository": "https://github.com/citrolabs/ego-lite",
+    "license": "MIT",
+    "sdkGuideVersion": "2.1.0",
+    "communityPullRequest": "https://github.com/citrolabs/ego-lite/pull/291",
+    "communitySourceRepository": "https://github.com/nosliwhtes/ego-lite",
+    "baseCommit": "7bb1545912bf7e7bdf4239a321d36af0e68cb65c"
+  },
+  "localSourceSnapshot": {
+    "commit": "6888f9ae1f4bf589a0dea7f24bac1719f35a5801",
+    "note": "Local development commit, not claimed to exist upstream. Reproduce from baseCommit plus patches/daily-chrome.patch.",
+    "exportedTrackedFiles": 230,
+    "directory": "vendor/ego-lite",
+    "sourcePatchFiles": 7,
+    "sourcePatchInsertions": 119,
+    "sourcePatchDeletions": 21
+  },
+  "newDistributionEntry": "bin/ego-browser",
+  "historicalSdkIndexSha256": "273087635236fcd0690f9df58238f7387ab7d8ec0d0baa42bca9e0c75d94d694",
+  "historicalHostSha256": "9c1639be8c45beef229b40b349235066b903a9a52381c07e6018edc43462ff0f",
+  "closedSourceEgoLiteApplicationIncluded": false,
+  "newWrapperLiveBusinessRetest": false,
+  "knownScreenshotZoomDefectFixed": false
+}

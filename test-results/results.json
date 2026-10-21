@@ -1,0 +1,150 @@
+{
+  "date": "2026-10-21",
+  "route": "original Pi 1.0.4 / DS high / Ego2.1 / daily Chrome",
+  "upstream": "7bb1545912bf7e7bdf4239a321d36af0e68cb65c",
+  "hostSourceLocalCommit": "6888f9a",
+  "runtimeHashes": {
+    "index": "273087635236fcd0690f9df58238f7387ab7d8ec0d0baa42bca9e0c75d94d694",
+    "host": "9c1639be8c45beef229b40b349235066b903a9a52381c07e6018edc43462ff0f"
+  },
+  "offline": {
+    "typecheck": true,
+    "tests": 554,
+    "pass": 554,
+    "includesNewScopeTests": 2
+  },
+  "runs": [
+    {
+      "run": "run-p9LAdu",
+      "file": "2026-10-21T11-31-07-518Z_01a15e3a-b27d-73b6-88fa-89e276391bb1.jsonl",
+      "start": "2026-10-21T11:31:14.564Z",
+      "end": "2026-10-21T11:34:20.092Z",
+      "durationSeconds": 185.528,
+      "totalTools": 30,
+      "egoBusinessCalls": 11,
+      "outerToolErrors": 0,
+      "rawUsage": {
+        "input": 44531,
+        "output": 25818,
+        "cacheRead": 1324416,
+        "cacheWrite": 0,
+        "reasoning": 12359,
+        "totalTokens": 1394765
+      },
+      "usageNote": "Raw provider fields including cache; not a verified bill or success oracle"
+    },
+    {
+      "run": "run-O1baoQ",
+      "file": "2026-10-21T11-34-34-661Z_01a15e3d-dba5-7626-9a2c-4abadb839862.jsonl",
+      "start": "2026-10-21T11:34:41.321Z",
+      "end": "2026-10-21T11:40:41.635Z",
+      "durationSeconds": 360.314,
+      "totalTools": 76,
+      "egoBusinessCalls": 32,
+      "outerToolErrors": 0,
+      "rawUsage": {
+        "input": 53887,
+        "output": 34529,
+        "cacheRead": 4052480,
+        "cacheWrite": 0,
+        "reasoning": 9656,
+        "totalTokens": 4140896
+      },
+      "usageNote": "Raw provider fields including cache; not a verified bill or success oracle"
+    },
+    {
+      "run": "run-XRztua",
+      "file": "2026-10-21T11-41-23-867Z_01a15e44-1a1b-71ae-9f63-eef7c53fdd57.jsonl",
+      "start": "2026-10-21T11:41:30.568Z",
+      "end": "2026-10-21T11:46:37.485Z",
+      "durationSeconds": 306.917,
+      "totalTools": 39,
+      "egoBusinessCalls": 11,
+      "outerToolErrors": 0,
+      "rawUsage": {
+        "input": 37596,
+        "output": 28664,
+        "cacheRead": 1645952,
+        "cacheWrite": 0,
+        "reasoning": 10496,
+        "totalTokens": 1712212
+      },
+      "usageNote": "Raw provider fields including cache; not a verified bill or success oracle"
+    }
+  ],
+  "form": {
+    "completedUI": true,
+    "pageSeconds": 119.4,
+    "reference": "VL-MVI1A8FZ",
+    "loggedAccepted": 24,
+    "missingFullAcceptedReceipts": [
+      11,
+      12,
+      27,
+      28,
+      29,
+      30
+    ],
+    "taskScriptKeywordStops": 2
+  },
+  "ks": {
+    "projects": 3,
+    "completedBusinessFlow": true,
+    "imageGeometryPassed": false,
+    "verificationWall": false
+  },
+  "bilibili": {
+    "openedFrozenVideos": 5,
+    "zeroCommentVideos": 2,
+    "readEntries": 11,
+    "uploaderEntries": 4,
+    "firstVideoUiCount": 6,
+    "firstVideoFullEntriesRead": 5,
+    "verificationWall": false,
+    "canonicalIds": [
+      "BV1Agej6gEPA",
+      "BV1ixJq6UE8z",
+      "BV1abtE6VENS",
+      "BV1DYai6MESq",
+      "BV1j2eQ6aEZB"
+    ]
+  },
+  "screenshotIssue": {
+    "zoom": 0.8999999761581421,
+    "dpr": 1.7999999523162842,
+    "cssViewport": [
+      1680,
+      895
+    ],
+    "sdkPng": [
+      1867,
+      994
+    ],
+    "deepScrollBlankReproduced": true,
+    "defaultCdpPng": [
+      3024,
+      1612
+    ],
+    "experimentalZoomMappedPng": [
+      1679,
+      894
+    ],
+    "fixInstalled": false
+  },
+  "cleanup": {
+    "ownedPiAndHostsStopped": true,
+    "remoteDebuggingDisabled": true,
+    "originalChromePid": 45668,
+    "originalTabsRetained": 8,
+    "formResultRetained": true,
+    "defaultPiWebUnchanged": true
+  },
+  "limitations": [
+    "One sample per task, not statistical stability or controlled speed A/B",
+    "Outer errors exclude caught/piped CLI and locator errors",
+    "Shared login task target group is not a browser permission sandbox",
+    "No system-wide user takeover detection",
+    "Main-document snapshot coverage; no new iframe proof",
+    "Source screenshots and raw authenticated sessions remain local"
+  ]
+}

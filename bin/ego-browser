@@ -1,0 +1,48 @@
+#!/usr/bin/env node
+// Repository-local Ego command only. No Agent/model launcher and no global install.
+import {spawn} from 'node:child_process';
+import {createReadStream, existsSync, lstatSync, mkdirSync, readFileSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+import {fileURLToPath} from 'node:url';
+import {dirname, join, resolve} from 'node:path';
+
+const root=dirname(dirname(fileURLToPath(import.meta.url)));
+const args=process.argv.slice(2);
+if(!args.length||['--help','-h'].includes(args[0])){
+  console.log('Usage: ego-browser skill | ego-browser nodejs [script.mjs] | ego-browser nodejs -e CODE | ego-browser stop\nDaily Chrome only; explicit browser approval required. See docs/INSTALL.md.');
+  process.exit(0);
+}
+const inline=args[0]==='nodejs'&&['-e','--eval'].includes(args[1]);
+if(!['skill','nodejs','stop'].includes(args[0])||(inline?args.length!==3:args.length>2)||(args[0]!=='nodejs'&&args.length!==1))
+  throw Error('Use skill, stop, or nodejs with stdin / one script file / -e CODE');
+if(Number(process.versions.node.split('.')[0])<22)throw Error('Node.js22+ required');
+if(process.platform!=='darwin')throw Error('This daily Chrome entry has only been validated on macOS');
+const entry=join(root,'vendor/ego-lite/package/ego-browser/dist/out/index.js');
+if(!existsSync(entry))throw Error('SDK not built. Run npm ci --ignore-scripts --prefix vendor/ego-lite/package/ego-browser, then npm run build');
+if(args[0]==='skill'){
+  const guide=readFileSync(join(dirname(entry),'ego-browser/SKILL.md'),'utf8');
+  const note='Daily Chrome wrapper (macOS): uses the explicitly authorized running Google Chrome, NOT an isolated browser. Login/cookies/storage are shared. TaskSpace exposes only this host\'s created targets and confirmed opener descendants. It is not a browser-permission sandbox and has no system-wide takeover detector. Snapshots currently cover the main document. Non-default website zoom can break screenshot geometry; use controls/text by default and do not gate completed text tasks on optional screenshots. Browser-owned approval remains required. Run this same repository command with stop to disconnect; Chrome is not closed. For installation use this repository\'s docs/INSTALL.md; bundled installation references describe upstream EgoLite.\n';
+  const body=guide.indexOf('\n# ego-browser\n');
+  if(body<0||!guide.startsWith('[ego-browser:skill] ego-browser usage guide v2.1.0\n')||!guide.includes('[ego-browser:skill] end of guide v2.1.0'))throw Error('Unexpected guide layout; review wrapper preface before use');
+  process.stdout.write(guide.split('\n',1)[0]+'\n\n'+note+'\n'+guide.slice(body+1));
+  process.exit(0);
+}
+const key=createHash('sha256').update(root).digest('hex').slice(0,12);
+// macOS TMPDIR is often too long for a Unix-domain socket; use a short private
+// system-temp name derived from uid+checkout, not an exposed listening server.
+const shortState=join('/tmp',`ego-chrome-${process.getuid()}-${key}`);
+if(!existsSync(shortState))mkdirSync(shortState,{mode:0o700});
+const st=lstatSync(shortState);
+if(!st.isDirectory()||st.isSymbolicLink()||st.uid!==process.getuid()||(st.mode&0o077))throw Error('State directory must be private and owned by this user');
+const env={...process.env,EGO_LINUX:'1',EGO_DAILY_CHROME:'1',EGO_LINUX_HEADLESS:'0',
+  EGO_CHROME_BIN:'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
+  EGO_LINUX_STATE_DIR:shortState,
+  EGO_BROWSER_AGENT_WORKSPACE:join(root,'vendor/ego-lite/package/ego-browser/dist/out/agent-skills/ego-browser')};
+const file=args[0]==='nodejs'&&args[1]&&!inline?resolve(args[1]):undefined;
+if(file&&!lstatSync(file).isFile())throw Error('Script must be a regular local file');
+const child=spawn(process.execPath,[entry,args[0]],{env,stdio:[file||inline?'pipe':'inherit','inherit','inherit']});
+if(inline)child.stdin.end(args[2]);
+if(file){const input=createReadStream(file);input.once('error',e=>{console.error(e.message);child.stdin.destroy(e)});input.pipe(child.stdin)}
+for(const signal of ['SIGINT','SIGTERM','SIGHUP'])process.once(signal,()=>{if(child.exitCode===null&&!child.killed)child.kill(signal)});
+child.once('error',e=>{console.error(e.message);process.exitCode=1});
+child.once('exit',(code,signal)=>{process.exitCode=code??(signal?1:0)});

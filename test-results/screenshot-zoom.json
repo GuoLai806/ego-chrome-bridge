@@ -1,0 +1,53 @@
+{
+  "info": {
+    "url": "https://www.kickstarter.com/projects/keyitechnology/loona-deskmate-the-worlds-first-screen-aware-ai-co-worker/comments",
+    "title": "Loona Deskmate: The Cutest Desk Robot That Actually Helps by Jianbo » Loona Deskmate: The Cutest Desk Robot That Actually Helps — Comments — Kickstarter",
+    "w": 1680,
+    "h": 895,
+    "sx": 0,
+    "sy": 10824.4443359375,
+    "pw": 1663,
+    "ph": 11720
+  },
+  "after": {
+    "url": "https://www.kickstarter.com/projects/keyitechnology/loona-deskmate-the-worlds-first-screen-aware-ai-co-worker/comments",
+    "title": "Loona Deskmate: The Cutest Desk Robot That Actually Helps by Jianbo » Loona Deskmate: The Cutest Desk Robot That Actually Helps — Comments — Kickstarter",
+    "w": 1680,
+    "h": 895,
+    "sx": 0,
+    "sy": 10824.4443359375,
+    "pw": 1663,
+    "ph": 11720
+  },
+  "visual": {
+    "dpr": 1.7999999523162842,
+    "innerWidth": 1680,
+    "innerHeight": 895,
+    "scrollX": 0,
+    "scrollY": 10824.4443359375
+  },
+  "zoom": 0.8999999761581421,
+  "clip": {
+    "x": 0,
+    "y": 9741.999644268886,
+    "width": 1511.9999599456787,
+    "height": 805.4999786615372,
+    "scale": 0.5555555702727522
+  },
+  "dimensions": {
+    "unchanged-sdk.png": {
+      "width": 1867,
+      "height": 994
+    },
+    "experimental-zoom-mapped.png": {
+      "width": 1679,
+      "height": 894
+    },
+    "default-cdp.png": {
+      "width": 3024,
+      "height": 1612
+    }
+  },
+  "stableScroll": true,
+  "note": "Experimental CDP capture only; SDK source remains unchanged. No zoom change."
+}

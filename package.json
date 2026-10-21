@@ -1,0 +1,14 @@
+{
+  "name": "ego-chrome-bridge",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Agent-independent Ego 2.1 bridge for an explicitly authorized daily Chrome session on macOS",
+  "license": "MIT",
+  "engines": {"node": ">=22"},
+  "scripts": {
+    "build": "npm --prefix vendor/ego-lite/package/ego-browser run build",
+    "test": "npm --prefix vendor/ego-lite/package/ego-browser test && node --test tests/*.test.mjs",
+    "check": "node --test tests/*.test.mjs && npm --prefix vendor/ego-lite/package/ego-browser run typecheck"
+  }
+}

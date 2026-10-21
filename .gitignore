@@ -1,0 +1,20 @@
+node_modules/
+dist/
+artifacts/
+.DS_Store
+.env
+.env.*
+*.log
+.build.lock
+.cache/
+runtime-state/
+local-evidence/
+raw-sessions/
+.pi/
+auth.json
+models.json
+Cookies
+Login Data
+*.pem
+*.key
+*.p12

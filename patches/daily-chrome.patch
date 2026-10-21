@@ -1,0 +1,203 @@
+diff --git a/package/ego-browser/src/linux/client.ts b/package/ego-browser/src/linux/client.ts
+index 1344e13..8bf55f0 100644
+--- a/package/ego-browser/src/linux/client.ts
++++ b/package/ego-browser/src/linux/client.ts
+@@ -17,0 +18 @@ export function hostDirectory(): string {
++        process.env.EGO_DAILY_CHROME,
+diff --git a/package/ego-browser/src/linux/daily-chrome.ts b/package/ego-browser/src/linux/daily-chrome.ts
+new file mode 100644
+index 0000000..ea5aca4
+--- /dev/null
++++ b/package/ego-browser/src/linux/daily-chrome.ts
+@@ -0,0 +1,43 @@
++// Thin opt-in transport. Chrome owns its process/profile and presents its own
++// connection approval. Never launch, copy a profile, or close the browser.
++import { readFile, lstat } from "node:fs/promises";
++import { homedir } from "node:os";
++import { join } from "node:path";
++import { PassThrough } from "node:stream";
++import { LinuxBridge } from "./bridge.js";
++
++export async function attachDailyChrome() {
++  if (process.platform !== "darwin") throw new Error("Daily Chrome trial is macOS only");
++  // Same DevToolsActivePort discovery used by official Chrome DevTools MCP.
++  const file = join(homedir(), "Library/Application Support/Google/Chrome/DevToolsActivePort");
++  const st = await lstat(file);
++  if (!st.isFile() || st.isSymbolicLink() || st.uid !== process.getuid())
++    throw new Error("Unowned Chrome discovery file");
++  const [port, endpoint] = (await readFile(file, "utf8")).trim().split("\n");
++  if (!/^\d+$/.test(port) || +port < 1 || +port > 65535 || !/^\/devtools\/browser\/[\w-]+$/.test(endpoint))
++    throw new Error("Invalid local Chrome discovery file");
++  const socket = new WebSocket(`ws://127.0.0.1:${port}${endpoint}`);
++  await new Promise<void>((resolve, reject) => {
++    const timer = setTimeout(() => { socket.close(); reject(new Error("Chrome approval/connection timed out")); }, 90_000);
++    socket.addEventListener("open", () => { clearTimeout(timer); resolve(); }, { once: true });
++    socket.addEventListener("error", () => { clearTimeout(timer); reject(new Error("Chrome connection failed; no alternate browser started")); }, { once: true });
++  });
++  const input = new PassThrough(), output = new PassThrough();
++  let buffer = "";
++  input.setEncoding("utf8");
++  input.on("data", chunk => {
++    buffer += chunk;
++    let end: number;
++    while ((end = buffer.indexOf("\0")) >= 0) {
++      const packet = buffer.slice(0, end); buffer = buffer.slice(end + 1);
++      if (packet) socket.send(packet);
++    }
++  });
++  const bridge = new LinuxBridge(input, output);
++  socket.addEventListener("message", event => output.write(String(event.data) + "\0"));
++  socket.addEventListener("close", () => bridge.close(new Error("Daily Chrome disconnected")));
++  socket.addEventListener("error", () => bridge.close(new Error("Daily Chrome connection failed")));
++  await bridge.call("Browser.getVersion");
++  return { bridge, headless: false, shared: true,
++    async close() { bridge.close(); output.destroy(); socket.close(); } };
++}
+diff --git a/package/ego-browser/src/linux/host.test.mjs b/package/ego-browser/src/linux/host.test.mjs
+index 04ce556..e6f2b38 100644
+--- a/package/ego-browser/src/linux/host.test.mjs
++++ b/package/ego-browser/src/linux/host.test.mjs
+@@ -5 +5 @@ import { LinuxHost } from "../../dist/src/linux/host.js";
+-function fixture(headless = false) {
++function fixture(headless = false, shared = false) {
+@@ -10,0 +11 @@ function fixture(headless = false) {
++    shared,
+@@ -44,0 +46,25 @@ function fixture(headless = false) {
++test("daily Chrome exposes only created targets and their confirmed popups", async () => {
++  const {a, call, targets, calls} = fixture(false, true);
++  targets.push({targetId:"private", type:"page", title:"private"});
++  const x = await call(a,"createTaskSpace",null,["daily"]);
++  const own = (await call(a,"listTabs",x.id)).tabs[0];
++  assert.notEqual(own.targetId,"private");
++  assert.equal(calls.some(c=>c.method==="Target.createBrowserContext"),false);
++  targets.push({targetId:"popup",type:"page",openerId:own.targetId});
++  targets.push({targetId:"private-popup",type:"page",openerId:"private"});
++  assert.deepEqual((await call(a,"listTabs",x.id)).tabs.map(t=>t.targetId),[own.targetId,"popup"]);
++  for (const method of ["Target.attachToTarget","Target.activateTarget","Target.closeTarget"])
++    await assert.rejects(call(a,"cdp",x.id,[{method,params:{targetId:"private"}}]),{error_code:"EGO_WEB_CONTENTS_UNAVAILABLE"});
++  await assert.rejects(call(a,"cdp",x.id,[{method:"Browser.close"}]),{error_code:"EGO_CDP_SEND_FAILED"});
++  await call(a,"closeTaskSpace",x.id);
++  assert.deepEqual(calls.filter(c=>c.method==="Target.closeTarget").map(c=>c.params.targetId),[own.targetId,"popup"]);
++  assert.equal(calls.some(c=>c.method==="Target.disposeBrowserContext"),false);
++});
++test("daily Chrome does not absorb unknown tabs or another task's popup", async () => {
++  const {a,b,call,targets}=fixture(false,true);
++  const x=await call(a,"createTaskSpace",null,["x"]), y=await call(b,"createTaskSpace",null,["y"]);
++  const yt=(await call(b,"listTabs",y.id)).tabs[0].targetId;
++  targets.push({targetId:"ypop",type:"page",openerId:yt},{targetId:"unknown",type:"page"});
++  assert.equal((await call(a,"listTabs",x.id)).tabs.length,1);
++  assert.equal((await call(b,"listTabs",y.id)).tabs.length,2);
++});
+diff --git a/package/ego-browser/src/linux/host.ts b/package/ego-browser/src/linux/host.ts
+index 7ac4ec3..1b82975 100644
+--- a/package/ego-browser/src/linux/host.ts
++++ b/package/ego-browser/src/linux/host.ts
+@@ -55 +55 @@ export class LinuxHost {
+-    this.spaces = new LinuxTaskSpaces(chrome.bridge.call);
++    this.spaces = new LinuxTaskSpaces(chrome.bridge.call, chrome.shared);
+@@ -79,0 +80 @@ export class LinuxHost {
++    if (info) this.spaces.registerPopup(info);
+@@ -121,2 +122 @@ export class LinuxHost {
+-              this.spaces.require(id).browserContextId ===
+-              target.browserContextId
++              this.spaces.owns(this.spaces.require(id), target)
+@@ -144,2 +144,2 @@ export class LinuxHost {
+-  private async targetsFor(spaceId: number) {
+-    const space = this.spaces.require(spaceId);
++  private async targetsFor(spaceId: number, agent = true) {
++    const space = this.spaces.require(spaceId, agent);
+@@ -147,0 +148 @@ export class LinuxHost {
++    for (const target of targetInfos) this.spaces.registerPopup(target);
+@@ -149 +150 @@ export class LinuxHost {
+-      (target: any) => target.browserContextId === space.browserContextId,
++      (target: any) => this.spaces.owns(space, target),
+@@ -166 +167 @@ export class LinuxHost {
+-    const { targetInfos } = await this.chrome.bridge.call("Target.getTargets");
++    const targetInfos = await this.targetsFor(spaceId, false);
+@@ -169 +170 @@ export class LinuxHost {
+-        t.type === "page" && t.browserContextId === space.browserContextId,
++        t.type === "page",
+@@ -269 +270 @@ export class LinuxHost {
+-      if (method === "Browser.cancelDownload")
++      if (method === "Browser.cancelDownload" && !this.chrome.shared)
+@@ -278,0 +280 @@ export class LinuxHost {
++        this.spaces.register(spaceId, result.targetId);
+@@ -347 +349 @@ export class LinuxHost {
+-          await this.chrome.bridge.call("Target.createTarget", {
++          const result = await this.chrome.bridge.call("Target.createTarget", {
+@@ -350,0 +353 @@ export class LinuxHost {
++          this.spaces.register(space.id, result.targetId);
+@@ -393,0 +397 @@ export class LinuxHost {
++        this.spaces.register(spaceId, result.targetId);
+@@ -591 +595 @@ export async function runLinuxHost(directory: string) {
+-    chrome.process.once("exit", () => {
++    chrome.process?.once("exit", () => {
+diff --git a/package/ego-browser/src/linux/index.ts b/package/ego-browser/src/linux/index.ts
+index df8fc95..b1e5bbf 100644
+--- a/package/ego-browser/src/linux/index.ts
++++ b/package/ego-browser/src/linux/index.ts
+@@ -9,0 +10,2 @@ export async function installEgoLinux(): Promise<void> {
++  const supported = process.platform === "linux" ||
++    (process.platform === "darwin" && process.env.EGO_LINUX === "1");
+@@ -13 +15 @@ export async function installEgoLinux(): Promise<void> {
+-    process.platform !== "linux" ||
++    !supported ||
+diff --git a/package/ego-browser/src/linux/launcher.ts b/package/ego-browser/src/linux/launcher.ts
+index c14b098..2c7e1c1 100644
+--- a/package/ego-browser/src/linux/launcher.ts
++++ b/package/ego-browser/src/linux/launcher.ts
+@@ -6,0 +7 @@ import { LinuxBridge } from "./bridge.js";
++import { attachDailyChrome } from "./daily-chrome.js";
+@@ -34 +35 @@ export interface ChromeInstance {
+-  process: ChildProcess;
++  process?: ChildProcess;
+@@ -36,0 +38 @@ export interface ChromeInstance {
++  shared?: boolean;
+@@ -47 +49 @@ export function chromeArguments(profile: string, headless: boolean): string[] {
+-    ...(headless ? ["--headless=new"] : ["--ozone-platform-hint=auto"]),
++    ...(headless ? ["--headless=new"] : process.platform === "linux" ? ["--ozone-platform-hint=auto"] : []),
+@@ -52,0 +55 @@ export async function launchChrome(directory: string): Promise<ChromeInstance> {
++  if (process.env.EGO_DAILY_CHROME === "1") return attachDailyChrome();
+diff --git a/package/ego-browser/src/linux/task-spaces.ts b/package/ego-browser/src/linux/task-spaces.ts
+index c9e4461..7d44902 100644
+--- a/package/ego-browser/src/linux/task-spaces.ts
++++ b/package/ego-browser/src/linux/task-spaces.ts
+@@ -29 +29,13 @@ export class LinuxTaskSpaces {
+-  constructor(private cdp: CdpCall) {}
++  private owned = new Map<number, Set<string>>();
++  constructor(private cdp: CdpCall, private shared = false) {}
++  owns(space: TaskSpace, target: any) {
++    return this.shared ? this.owned.get(space.id)?.has(target.targetId) === true :
++      target.browserContextId === space.browserContextId;
++  }
++  register(id: number, targetId: string) { if (this.shared) this.owned.get(id)?.add(targetId); }
++  registerPopup(target: any) {
++    if (!this.shared || target.type !== "page" || !target.openerId) return;
++    for (const [id, targets] of this.owned) {
++      if (this.spaces.get(id)?.ownership === "agent" && targets.has(target.openerId)) targets.add(target.targetId);
++    }
++  }
+@@ -34 +46 @@ export class LinuxTaskSpaces {
+-        { id: "Default", name: "Isolated Linux sessions", isDefault: true },
++        { id: "Default", name: this.shared ? "Daily Chrome (shared login, owned tabs only)" : "Isolated Linux sessions", isDefault: true },
+@@ -63 +75 @@ export class LinuxTaskSpaces {
+-    const { browserContextId } = await this.cdp("Target.createBrowserContext", {
++    const { browserContextId } = this.shared ? {browserContextId: undefined} : await this.cdp("Target.createBrowserContext", {
+@@ -66 +78 @@ export class LinuxTaskSpaces {
+-    if (!browserContextId)
++    if (!this.shared && !browserContextId)
+@@ -79 +91 @@ export class LinuxTaskSpaces {
+-      profileName: "Isolated Linux sessions",
++      profileName: this.shared ? "Daily Chrome (shared login, owned tabs only)" : "Isolated Linux sessions",
+@@ -81,0 +94 @@ export class LinuxTaskSpaces {
++    this.owned.set(space.id, new Set());
+@@ -86 +99,6 @@ export class LinuxTaskSpaces {
+-    await this.cdp("Target.disposeBrowserContext", {
++    if (this.shared) {
++      const {targetInfos} = await this.cdp("Target.getTargets");
++      const live = new Set(targetInfos.map((t: any) => t.targetId));
++      for (const targetId of this.owned.get(id) ?? [])
++        if (live.has(targetId)) await this.cdp("Target.closeTarget", {targetId});
++    } else await this.cdp("Target.disposeBrowserContext", {
+@@ -89,0 +108 @@ export class LinuxTaskSpaces {
++    this.owned.delete(id);
